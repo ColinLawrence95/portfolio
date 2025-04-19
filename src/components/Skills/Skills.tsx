@@ -27,63 +27,54 @@ const Skills: React.FC = () => {
                 <motion.div
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", bounce: 0.7 }}
-                    style={{ margin: "20px" }}
                 >
                     <RiJavascriptLine size={60} />
                 </motion.div>
                 <motion.div
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", bounce: 0.7 }}
-                    style={{ margin: "20px" }}
                 >
                     <FaNodeJs size={50} />
                 </motion.div>
                 <motion.div
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", bounce: 0.7 }}
-                    style={{ margin: "20px" }}
                 >
                     <FaReact size={50} />
                 </motion.div>
                 <motion.div
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", bounce: 0.7 }}
-                    style={{ margin: "20px" }}
                 >
                     <AiOutlinePython size={50} />
                 </motion.div>
                 <motion.div
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", bounce: 0.7 }}
-                    style={{ margin: "20px" }}
                 >
                     <SiPostgresql size={45} />
                 </motion.div>
                 <motion.div
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", bounce: 0.7 }}
-                    style={{ margin: "20px" }}
                 >
                     <SiMongodb size={45} />
                 </motion.div>
                 <motion.div
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", bounce: 0.7 }}
-                    style={{ margin: "20px" }}
                 >
                     <SiExpress size={45} />
                 </motion.div>
                 <motion.div
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", bounce: 0.7 }}
-                    style={{ margin: "20px" }}
                 >
                     <SiFlask size={45} />
                 </motion.div>
                 <motion.div
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", bounce: 0.7 }}
-                    style={{ margin: "20px" }}
                 >
                     <SiDjango size={40} />
                 </motion.div>

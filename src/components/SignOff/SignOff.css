@@ -1,0 +1,48 @@
+.sign-container {
+    background-color: rgb(223, 33, 106);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+.sign-title {
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background-color: rgb(240, 36, 114);
+    width: 100%;
+    padding: 20px 0 20px 0;
+    font-size: 12px;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.658);
+}
+#resume {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.658);
+}
+#resume-icon {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+    .sign-container {
+        width: 360px;
+        height: 170px;
+        border-bottom-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+        margin-bottom: 50px;
+    }
+    .sign-title {
+        font-size: 10px;
+    }
+    #resume-icon {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+}

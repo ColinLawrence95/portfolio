@@ -4,7 +4,7 @@
     flex-direction: column;
     background-color: rgb(30, 120, 255);
     border-radius: 40px;
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom: 50px;
 }
 .contact-title{
@@ -25,5 +25,17 @@
 }
 #contact-icon 
 {
-    margin: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+@media (max-width: 768px) {
+    .contact-container {
+        width: 360px;
+        height: 170px;
+}
+.contact-title{
+    font-size: 9px;
+    position: relative;
+    top: -28px
+}
 }

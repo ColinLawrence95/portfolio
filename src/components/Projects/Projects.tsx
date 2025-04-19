@@ -21,7 +21,7 @@ const Projects: React.FC = () => {
             }}
         >
             <div className="projects-title">
-                <h1>Projects</h1>
+                <h1>PROJECTS</h1>
             </div>
             <div className="projects-elements">
                 <div className="projects-icon-title">
