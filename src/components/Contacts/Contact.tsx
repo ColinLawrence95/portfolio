@@ -11,8 +11,8 @@ const Contact: React.FC = () => {
             <motion.div 
             className="contact-container"
             animate={{
-                y: [0, -1, 0], 
-                rotate: [0, .3, -.3, 0], 
+                y: [0, -5, 0], 
+                rotate: [0, .8, -.8, 0], 
               }}
               transition={{
                 duration: 10, 

@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     border-radius: 40px;
-    background-color: rgb(153, 33, 233);
+    background-color: rgb(128, 28, 196);
     margin-bottom: 50px;
 }
 .projects-title{
@@ -12,36 +12,59 @@
     justify-content: center;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    background-color: rgb(167, 36, 255);
+    background-color: rgb(145, 30, 221);
     width: 100%;
     padding: 20px 0 20px 0;
     font-size: 10px;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.658);
 }
-.projects-resumania{
+.projects-elements{
     display: flex;
     align-items: center;
     justify-content: space-between;
    
-    width: 100%;
+    width: 90%;
 }
-.projects-resumania-icon-title{
+.projects-icon-title{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px 0px 0px 50px;
+    margin: 5px 0px 0px 0px;
 }
-#projects-resumania-title{
+#projects-name{
     font-weight: 500;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.658);
-    margin-left: 5px;
+
 }
 #projects-link{
-    margin: 10px 50px 0 0;
+    margin: 10px 0px 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    
 }
-#project-resumania-desc{
-    width: 100%;
-    margin: 5px 0 0 110px;
+#project-desc{
+    width: 90%;
+    margin: 5px 0 30px 10px;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.658);
     font-size: 12px;
 }
+#projects-icon-express{
+    margin: 0;
+}
+#projects-icon-mongodb{
+ width: 21px;
+}
+#projects-icon-node{
+    margin-right: 5px;
+    margin-left: 3px;
+   }
+
+   #projects-icon-flask{
+    margin-left: 5px;
+   }
+   #projects-icon-postgres{
+    margin-left: 2px;
+    margin-right: 5px;
+   }
