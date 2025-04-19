@@ -29,15 +29,11 @@
 }
 @media (max-width: 768px) {
     .skills-container {
-        width: 360px;
-        height: 170px;
+        width: 350px;
     }
     .skills-icons  * {
-        margin: 0;
-        width: 38px;
+        margin: 0 2px 0 2px;
+        width: 32px;
     }
-    .skills-title{
-        position: relative;
-        top: -16px
-    }
+ 
 }

@@ -32,8 +32,7 @@
 }
 @media (max-width: 768px) {
     .sign-container {
-        width: 360px;
-        height: 170px;
+        width: 350px;
         border-bottom-right-radius: 40px;
         border-bottom-left-radius: 40px;
         margin-bottom: 50px;

@@ -30,12 +30,13 @@
 }
 @media (max-width: 768px) {
     .contact-container {
-        width: 360px;
-        height: 170px;
+        width: 350px;
+       
 }
 .contact-title{
-    font-size: 9px;
-    position: relative;
-    top: -28px
+    font-size: 8px;
+    margin-bottom: 5px;
+
 }
+
 }
