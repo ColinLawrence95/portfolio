@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
             </div>
             <div
                 className="hero-profile-pic"
-                style={{ backgroundImage: `url("/Profile.png")` }}
+                style={{ backgroundImage: `url("/portfolio/Profile.png")` }}
             ></div>
         </motion.div>
     );
