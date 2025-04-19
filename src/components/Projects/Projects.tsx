@@ -1,9 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { RiJavascriptLine } from "react-icons/ri";
-import { FaNodeJs, FaReact, FaExternalLinkAlt } from "react-icons/fa";
-import { AiOutlinePython } from "react-icons/ai";
-import { SiPostgresql, SiMongodb, SiExpress, SiFlask, SiDjango } from "react-icons/si";
+import { FaNodeJs, FaExternalLinkAlt } from "react-icons/fa";
+
 import "./Projects.css";
 
 const Projects: React.FC = () => {
