@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+h1, h4{
+  margin: 0;
+}
+body{
+  background-color: #131313;
+  font-family: "Orbitron";
+  display: flex;
+  justify-content: center;
+  color: whitesmoke;
+}
+a{
+  color: whitesmoke;
+  text-decoration: none;
+}
+a:hover{
+  color: whitesmoke;
+}
+
