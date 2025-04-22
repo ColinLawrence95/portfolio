@@ -4,9 +4,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    border-radius: 40px;
+    margin-bottom: 50px;
 }
+.sign-svg-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 900 / 200;
+    border-radius: 40px;
+    overflow: hidden;
+    z-index: 2;
+}
+
 .sign-title {
     display: flex;
     justify-content: center;
@@ -33,8 +46,6 @@
 @media (max-width: 768px) {
     .sign-container {
         width: 350px;
-        border-bottom-right-radius: 40px;
-        border-bottom-left-radius: 40px;
         margin-bottom: 50px;
     }
     .sign-title {
@@ -43,5 +54,8 @@
     #resume-icon {
         margin-top: 5px;
         margin-bottom: 10px;
+    }
+    .sign-svg-wrapper {
+        aspect-ratio: 350 / 100;
     }
 }

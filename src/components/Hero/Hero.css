@@ -17,12 +17,21 @@
     flex-direction: column;
     justify-content: left;
     text-align: left;
-    font-size: 24px;
+    font-size: 21px;
     margin-left: 90px;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.658);
 }
+.hero-svg-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 900 / 270;
+    border-radius: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
 .hero-profile-pic {
-    margin: 1px 50px 0 0;
+    margin: 1px 0px 0 50px;
     width: 250px;
     height: 271px;
     background-size: cover;
@@ -50,17 +59,20 @@
 }
 
 @media (max-width: 768px) {
-    .hero-container {
-        width: 350px;
-        height: 170px;
-    }
-    .hero-profile-pic {
-        margin: 21px 35px 0 0;
-        width: 121px;
-        height: 150px;
-    }
-    .hero-name-title {
-        font-size: 8px;
-        margin: 0 0 0 25px;
-    }
+  .hero-container {
+    max-width: 350px;
+    height: 170px;
+  }
+  .hero-svg-wrapper {
+    aspect-ratio: 350 / 170;
+  }
+  .hero-profile-pic {
+    margin: 20px 0px 0 0;
+    width: 130px;
+    height: 150px;
+  }
+  .hero-name-title {
+    font-size: 8px;
+    margin: 0 0 0 20px;
+  }
 }
