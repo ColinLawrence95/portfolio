@@ -8,14 +8,14 @@ import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import SignOff from "./components/SignOff/SignOff";
 
-// Define animation variants for sliding in
+
 const slideVariants = {
   hiddenLeft: { opacity: 0, x: -100 },
   hiddenRight: { opacity: 0, x: 100 },
   visible: { opacity: 1, x: 0 },
 };
 
-// Component wrapper to handle scroll animation
+
 interface AnimatedSectionProps {
   children: React.ReactNode;
   slideFrom: "left" | "right";
@@ -41,14 +41,14 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({ children, slideFrom, 
   );
 };
 
-// Type for section objects
+
 interface Section {
   component: React.ReactNode;
   slideFrom: "left" | "right";
 }
 
 function App() {
-  // Define sections with their slide direction
+
   const sections: Section[] = [
     { component: <Contact />, slideFrom: "left" },
     { component: <Skills />, slideFrom: "right" },
@@ -64,7 +64,6 @@ function App() {
             path="/portfolio/"
             element={
               <>
-              <title>Colin Lawrence - Portfolio</title>
                 <Hero />
                 {sections.map((section, index) => (
                   <AnimatedSection key={index} slideFrom={section.slideFrom} index={index}>

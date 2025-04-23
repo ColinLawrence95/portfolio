@@ -38,7 +38,10 @@ const Projects: React.FC = () => {
     }, []);
 
     const { width, height } = dimensions;
-
+    let iconSize = 25; 
+    if (dimensions.width <= 768) {
+      iconSize = 28; 
+    }
     return (
         <div className="projects-container" ref={containerRef}>
             <div className="projects-svg-wrapper">
@@ -115,7 +118,7 @@ const Projects: React.FC = () => {
                             transition={{ type: "spring", bounce: 0.7 }}
                             aria-label="Visit Resumania"
                         >
-                            <FaExternalLinkAlt id="projects-link" size={25} />
+                            <FaExternalLinkAlt id="projects-link" size={iconSize} />
                         </motion.a>
                     </motion.div>
                     <motion.p
@@ -147,7 +150,7 @@ const Projects: React.FC = () => {
                             transition={{ type: "spring", bounce: 0.7 }}
                             aria-label="Visit Hold or Fold"
                         >
-                            <FaExternalLinkAlt id="projects-link" size={25} />
+                            <FaExternalLinkAlt id="projects-link" size={iconSize} />
                         </motion.a>
                     </motion.div>
                     <motion.p
@@ -182,7 +185,7 @@ const Projects: React.FC = () => {
                             transition={{ type: "spring", bounce: 0.7 }}
                             aria-label="Visit Bestpresso"
                         >
-                            <FaExternalLinkAlt id="projects-link" size={25} />
+                            <FaExternalLinkAlt id="projects-link" size={iconSize} />
                         </motion.a>
                     </motion.div>
                     <motion.p

@@ -40,8 +40,8 @@ const Hero: React.FC = () => {
     return (
         <motion.div
             className="hero-container"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{y: -200, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             ref={containerRef}
         >

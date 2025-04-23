@@ -3,23 +3,24 @@ import { motion } from "framer-motion";
 import "./SignOff.css";
 import { IoDocumentTextOutline } from "react-icons/io5";
 
+const draw = {
+    hidden: { pathLength: 0, opacity: 0 },
+    visible: (i: number) => {
+        const delay = i * 0.5;
+        return {
+            pathLength: 1,
+            opacity: 1,
+            transition: {
+                pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
+                opacity: { delay, duration: 0.01 },
+            },
+        };
+    },
+};
+
 const SignOff: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [dimensions, setDimensions] = useState({ width: 900, height: 200 });
-    const draw = {
-        hidden: { pathLength: 0, opacity: 0 },
-        visible: (i: number) => {
-            const delay = i * 0.5;
-            return {
-                pathLength: 1,
-                opacity: 1,
-                transition: {
-                    pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
-                    opacity: { delay, duration: 0.01 },
-                },
-            };
-        },
-    };
 
     useEffect(() => {
         const updateDimensions = () => {
@@ -37,7 +38,13 @@ const SignOff: React.FC = () => {
     const { width, height } = dimensions;
 
     return (
-        <motion.div className="sign-container">
+        <motion.div
+            className="sign-container"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            ref={containerRef}
+        >
             <div className="sign-svg-wrapper">
                 <motion.svg
                     width="100%"
@@ -53,7 +60,7 @@ const SignOff: React.FC = () => {
                         y1="0"
                         x2="0"
                         y2={height}
-                        stroke="#b247f5"
+                        stroke="#ff3da1"
                         variants={draw}
                         custom={1}
                         style={shape}
@@ -63,7 +70,7 @@ const SignOff: React.FC = () => {
                         y1={height}
                         x2={width}
                         y2={height}
-                        stroke="#b247f5"
+                        stroke="#ff3da1"
                         variants={draw}
                         custom={2}
                         style={shape}
@@ -73,7 +80,7 @@ const SignOff: React.FC = () => {
                         y1={height}
                         x2={width}
                         y2="0"
-                        stroke="#b247f5"
+                        stroke="#ff3da1"
                         variants={draw}
                         custom={3}
                         style={shape}
@@ -83,34 +90,51 @@ const SignOff: React.FC = () => {
                         y1="0"
                         x2="0"
                         y2="0"
-                        stroke="#b247f5"
+                        stroke="#ff3da1"
                         variants={draw}
                         custom={4}
                         style={shape}
                     />
                 </motion.svg>
-                <div className="sign-title">
+                <div className="sign-title" role="heading" aria-label="Thanks for stopping by">
                     <h1>THANKS FOR STOPPING BY</h1>
                 </div>
-                <h4 id="resume">RESUME</h4>
-                <motion.a
-                    id="resume-icon"
-                    href="/portfolio/Resume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring", bounce: 0.7 }}
-                    style={{ display: "inline-block", color: "inherit", textDecoration: "none" }}
-                >
-                    <IoDocumentTextOutline size={60} />
-                </motion.a>
+                <div className="sign-resume">
+                    <motion.h4 
+                    id="resume" aria-label="Resume link"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 3.6, duration: 0.8 }}
+                    >
+                        RESUME
+                    </motion.h4>
+                    <motion.a
+                        id="resume-icon"
+                        href="/portfolio/Resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        initial={{ scale: 0.8, opacity: 0, y: -20 }}
+                        animate={{ scale: 1, opacity: 1, y: 0 }}
+                        whileHover={{ scale: 1.05 }}
+                        transition={{
+                            default: { delay: 1, type: "spring", bounce: 0.7, duration: 0.8 },
+                            scale: { type: "spring", bounce: 0.7, duration: 0.5 },
+                            opacity: { delay: 3.8, duration: 0.8 },
+                        }}
+                        aria-label="View resume"
+                    >
+                        <IoDocumentTextOutline size={60} />
+                    </motion.a>
+                </div>
             </div>
         </motion.div>
     );
 };
+
 const shape: React.CSSProperties = {
     strokeWidth: 10,
     strokeLinecap: "butt",
     fill: "transparent",
 };
+
 export default SignOff;
