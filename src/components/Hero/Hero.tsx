@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
                 </div>
                 <motion.div
                     className="hero-profile-pic"
-                    style={{ backgroundImage: `url("/portfolio/Profile.png")` }}
+                    style={{ backgroundImage: `url("/Profile.png")` }}
                     role="img"
                     aria-label="Profile picture of Colin Lawrence"
                     initial={{ scale: 0.8, opacity: 0 }}
