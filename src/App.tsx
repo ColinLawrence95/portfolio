@@ -61,7 +61,7 @@ function App() {
       <Router>
         <Routes>
           <Route
-            path="/portfolio/"
+            path="/"
             element={
               <>
                 <Hero />
