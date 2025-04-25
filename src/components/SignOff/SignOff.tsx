@@ -110,7 +110,7 @@ const SignOff: React.FC = () => {
                     </motion.h4>
                     <motion.a
                         id="resume-icon"
-                        href="/portfolio/Resume.pdf"
+                        href="/Colin-Lawrence-Resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         initial={{ scale: 0.8, opacity: 0, y: -20 }}
