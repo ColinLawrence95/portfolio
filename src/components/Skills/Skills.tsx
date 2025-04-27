@@ -113,76 +113,94 @@ const Skills: React.FC = () => {
         </div>
         <div className="skills-icons">
           <motion.div
+          className="tooltip"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 2, duration: 0.8 }}
             aria-label="JavaScript"
           >
             <RiJavascriptLine size={iconSize} />
+            <span className="tooltip-text">JavaScript</span>
           </motion.div>
           <motion.div
+          className="tooltip"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 2.1, duration: 0.8 }}
             aria-label="Node.js"
           >
             <FaNodeJs size={iconSize} />
+            <span className="tooltip-text">Node.js</span>
           </motion.div>
           <motion.div
+          className="tooltip"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 2.2, duration: 0.8 }}
             aria-label="React"
           >
             <FaReact size={iconSize} />
+            <span className="tooltip-text">React</span>
           </motion.div>
           <motion.div
+          className="tooltip"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 2.3, duration: 0.8 }}
             aria-label="Python"
           >
             <AiOutlinePython size={iconSize} />
+            <span className="tooltip-text">Python</span>
           </motion.div>
           <motion.div
+          className="tooltip"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 2.4, duration: 0.8 }}
             aria-label="PostgreSQL"
           >
             <SiPostgresql size={iconSize} />
+            <span className="tooltip-text">PostgreSQL</span>
           </motion.div>
           <motion.div
+          className="tooltip"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 2.5, duration: 0.8 }}
             aria-label="MongoDB"
           >
             <SiMongodb size={iconSize} />
+            <span className="tooltip-text">MongoDB</span>
           </motion.div>
           <motion.div
+          className="tooltip"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 2.6, duration: 0.8 }}
             aria-label="Express"
           >
             <SiExpress size={iconSize} />
+            <span className="tooltip-text">Express</span>
           </motion.div>
           <motion.div
+          className="tooltip"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 2.7, dynamic: 0.8 }}
             aria-label="Flask"
           >
             <SiFlask size={iconSize} />
+            <span className="tooltip-text">Flask</span>
           </motion.div>
           <motion.div
+          className="tooltip"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 2.8, duration: 0.8 }}
             aria-label="Django"
           >
             <SiDjango size={iconSize} />
+            <span className="tooltip-text">Django</span>
           </motion.div>
         </div>
       </div>

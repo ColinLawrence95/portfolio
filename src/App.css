@@ -22,3 +22,7 @@ html {
   scroll-behavior: smooth;
 }
 
+svg{
+  position: relative;
+  z-index: -12;
+}
