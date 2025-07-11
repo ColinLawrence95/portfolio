@@ -138,7 +138,7 @@ const Projects: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 3.1, duration: 0.8 }}
                     >
-                       A REALTOR SITE WITH LISTINGS & REVIEWS
+                       A REALTOR SITE WITH LIVE LISTINGS & REVIEWS
                     </motion.p>
 
                     <motion.div
