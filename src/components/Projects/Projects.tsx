@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { RiJavascriptLine } from "react-icons/ri";
 import { FaNodeJs, FaExternalLinkAlt, FaReact } from "react-icons/fa";
 import { SiPostgresql, SiMongodb, SiExpress, SiFlask } from "react-icons/si";
+import { TbBrandTypescript } from "react-icons/tb";
 import "./Projects.css";
 
 const draw = {
@@ -22,7 +23,7 @@ const draw = {
 
 const Projects: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
-    const [dimensions, setDimensions] = useState({ width: 900, height: 325 });
+    const [dimensions, setDimensions] = useState({ width: 900, height: 425 });
 
     useEffect(() => {
         const updateDimensions = () => {
@@ -38,9 +39,9 @@ const Projects: React.FC = () => {
     }, []);
 
     const { width, height } = dimensions;
-    let iconSize = 25; 
+    let iconSize = 25;
     if (dimensions.width <= 768) {
-      iconSize = 28; 
+        iconSize = 28;
     }
     return (
         <div className="projects-container" ref={containerRef}>
@@ -103,31 +104,41 @@ const Projects: React.FC = () => {
                         className="projects-elements"
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 3, duration: 0.8 }}
+                        transition={{ delay: 3.1, duration: 0.8 }}
                     >
                         <div className="projects-icon-title">
-                            <RiJavascriptLine size={30} aria-label="JavaScript" />
-                            <FaNodeJs id="projects-icon-node" size={25} aria-label="Node.js" />
-                            <h4 id="projects-name">RESUMANIA</h4>
+                            <FaReact id="projects-icon-react" size={25} aria-label="React" />
+                            <TbBrandTypescript
+                                id="projects-icon-typescript"
+                                size={25}
+                                aria-label="TypeScript"
+                            />
+                            <SiExpress id="projects-icon-flask" size={23} aria-label="Flask" />
+                            <FaNodeJs
+                                id="projects-icon-postgres"
+                                size={22}
+                                aria-label="PostgreSQL"
+                            />
+                            <h4 id="projects-name-jk">THE JIM KELLY TEAM</h4>
                         </div>
                         <motion.a
-                            href="https://colinlawrence95.github.io/Resumania/"
+                            href="https:www.thejimkellyteam.com"
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.05 }}
                             transition={{ type: "spring", bounce: 0.7 }}
-                            aria-label="Visit Resumania"
+                            aria-label="Visit thejimkellyteam.com"
                         >
                             <FaExternalLinkAlt id="projects-link" size={iconSize} />
                         </motion.a>
                     </motion.div>
                     <motion.p
+                        id="project-desc-jk"
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 3, duration: 0.8 }}
-                        id="project-desc"
+                        transition={{ delay: 3.1, duration: 0.8 }}
                     >
-                        A GAME ABOUT THE JOB MARKET
+                       A REALTOR SITE WITH LISTINGS & REVIEWS
                     </motion.p>
 
                     <motion.div
@@ -135,37 +146,6 @@ const Projects: React.FC = () => {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 3.2, duration: 0.8 }}
-                    >
-                        <div className="projects-icon-title">
-                            <SiMongodb id="projects-icon-mongodb" size={25} aria-label="MongoDB" />
-                            <SiExpress id="projects-icon-express" size={22} aria-label="Express" />
-                            <FaNodeJs id="projects-icon-node" size={25} aria-label="Node.js" />
-                            <h4 id="projects-name">HOLD OR FOLD</h4>
-                        </div>
-                        <motion.a
-                            href="https://hold-or-fold-f5c8c8cb18fe.herokuapp.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            whileHover={{ scale: 1.05 }}
-                            transition={{ type: "spring", bounce: 0.7 }}
-                            aria-label="Visit Hold or Fold"
-                        >
-                            <FaExternalLinkAlt id="projects-link" size={iconSize} />
-                        </motion.a>
-                    </motion.div>
-                    <motion.p
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 3.2, duration: 0.8 }}
-                        id="project-desc"
-                    >
-                        A PVP CRYPTO BETTING EXPERIENCE
-                    </motion.p>
-                    <motion.div
-                        className="projects-elements"
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 3.4, duration: 0.8 }}
                     >
                         <div className="projects-icon-title">
                             <FaReact id="projects-icon-react" size={25} aria-label="React" />
@@ -192,9 +172,70 @@ const Projects: React.FC = () => {
                         id="project-desc"
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 3.4, duration: 0.8 }}
+                        transition={{ delay: 3.2, duration: 0.8 }}
                     >
                         A DIGITAL MARKETPLACE FOR COFFEE
+                    </motion.p>
+                    <motion.div
+                        className="projects-elements"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 3.3, duration: 0.8 }}
+                    >
+                        <div className="projects-icon-title">
+                            <SiMongodb id="projects-icon-mongodb" size={25} aria-label="MongoDB" />
+                            <SiExpress id="projects-icon-express" size={22} aria-label="Express" />
+                            <FaNodeJs id="projects-icon-node" size={25} aria-label="Node.js" />
+                            <h4 id="projects-name">HOLD OR FOLD</h4>
+                        </div>
+                        <motion.a
+                            href="https://hold-or-fold-f5c8c8cb18fe.herokuapp.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ type: "spring", bounce: 0.7 }}
+                            aria-label="Visit Hold or Fold"
+                        >
+                            <FaExternalLinkAlt id="projects-link" size={iconSize} />
+                        </motion.a>
+                    </motion.div>
+                    <motion.p
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 3.3, duration: 0.8 }}
+                        id="project-desc"
+                    >
+                        A PVP CRYPTO BETTING EXPERIENCE
+                    </motion.p>
+                    <motion.div
+                        className="projects-elements"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 3.4, duration: 0.8 }}
+                    >
+                        <div className="projects-icon-title">
+                            <RiJavascriptLine size={30} aria-label="JavaScript" />
+                            <FaNodeJs id="projects-icon-node" size={25} aria-label="Node.js" />
+                            <h4 id="projects-name">RESUMANIA</h4>
+                        </div>
+                        <motion.a
+                            href="https://colinlawrence95.github.io/Resumania/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ type: "spring", bounce: 0.7 }}
+                            aria-label="Visit Resumania"
+                        >
+                            <FaExternalLinkAlt id="projects-link" size={iconSize} />
+                        </motion.a>
+                    </motion.div>
+                    <motion.p
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 3.4, duration: 0.8 }}
+                        id="project-desc"
+                    >
+                        A GAME ABOUT THE JOB MARKET
                     </motion.p>
                 </div>
             </div>

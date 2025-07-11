@@ -5,7 +5,7 @@ import { RiJavascriptLine } from "react-icons/ri";
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { AiOutlinePython } from "react-icons/ai";
 import { SiPostgresql, SiMongodb, SiExpress, SiFlask, SiDjango } from "react-icons/si";
-
+import { TbBrandTypescript } from "react-icons/tb";
 
 
 const Skills: React.FC = () => {
@@ -42,7 +42,7 @@ const Skills: React.FC = () => {
   const { width, height } = dimensions;
   let iconSize = 44; 
   if (dimensions.width <= 768) {
-    iconSize = 33; 
+    iconSize = 28
   }
 
   return (
@@ -116,11 +116,21 @@ const Skills: React.FC = () => {
           className="tooltip"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 2, duration: 0.8 }}
+            transition={{ delay: 1.9, duration: 0.8 }}
             aria-label="JavaScript"
           >
             <RiJavascriptLine size={iconSize} />
             <span className="tooltip-text">JavaScript</span>
+          </motion.div>
+          <motion.div
+          className="tooltip"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 2, duration: 0.8 }}
+            aria-label="JavaScript"
+          >
+            <TbBrandTypescript size={iconSize} />
+            <span className="tooltip-text">TypeScript</span>
           </motion.div>
           <motion.div
           className="tooltip"
