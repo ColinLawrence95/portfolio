@@ -122,7 +122,7 @@ const Projects: React.FC = () => {
                             <h4 id="projects-name-jk">THE JIM KELLY TEAM</h4>
                         </div>
                         <motion.a
-                            href="https:www.thejimkellyteam.com"
+                            href="https://thejimkellyteam.com"
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.05 }}
