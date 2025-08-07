@@ -17,7 +17,7 @@
     flex-direction: column;
     justify-content: left;
     text-align: left;
-    font-size: 21px;
+    font-size: 19px;
     margin-left: 90px;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.658);
 }
@@ -38,6 +38,9 @@
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 10px;
+}
+.hero-job-title{
+  font-size: 10px;
 }
 
 @keyframes movingBackground {
@@ -72,7 +75,7 @@
     height: 150px;
   }
   .hero-name-title {
-    font-size: 8px;
+    font-size: 7px;
     margin: 0 0 0 20px;
   }
 }

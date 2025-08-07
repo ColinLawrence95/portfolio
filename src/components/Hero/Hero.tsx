@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
                     aria-label="Colin Lawrence, Web Developer"
                 >
                     <h1>COLIN LAWRENCE</h1>
-                    <h1>WEB DEV</h1>
+                    <h1>SOFTWARE ENGINEER</h1>
                 </div>
                 <motion.div
                     className="hero-profile-pic"

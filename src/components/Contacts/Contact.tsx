@@ -107,7 +107,7 @@ const Contact: React.FC = () => {
                         role="heading"
                         aria-label="I make full stack web apps"
                     >
-                        <h1>I MAKE FULL STACK WEB APPS</h1>
+                        <h1>I MAKE FULL STACK APPLICATIONS</h1>
                     </div>
                     <div className="contact-icons">
                         <motion.a
