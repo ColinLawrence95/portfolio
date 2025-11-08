@@ -9,12 +9,12 @@ import "./Projects.css";
 const draw = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: (i: number) => {
-        const delay = i * 0.5;
+        const delay = 0.5 + i * 0.5;
         return {
             pathLength: 1,
             opacity: 1,
             transition: {
-                pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
+                pathLength: { delay, type: "spring", duration: 3, bounce: 0 },
                 opacity: { delay, duration: 0.01 },
             },
         };
@@ -53,46 +53,23 @@ const Projects: React.FC = () => {
                     preserveAspectRatio="xMidYMid meet"
                     initial="hidden"
                     animate="visible"
-                    style={{ position: "absolute", top: 0, left: 0, zIndex: 1 }}
+                    style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        zIndex: 3,
+                        pointerEvents: "none",
+                    }}
                 >
-                    <motion.line
-                        x1="0"
-                        y1="0"
-                        x2="0"
-                        y2={height}
+                    <motion.rect
+                        x="0"
+                        y="0"
+                        width={width}
+                        height={height}
+                        rx="40"
                         stroke="#b247f5"
                         variants={draw}
                         custom={1}
-                        style={shape}
-                    />
-                    <motion.line
-                        x1="0"
-                        y1={height}
-                        x2={width}
-                        y2={height}
-                        stroke="#b247f5"
-                        variants={draw}
-                        custom={2}
-                        style={shape}
-                    />
-                    <motion.line
-                        x1={width}
-                        y1={height}
-                        x2={width}
-                        y2="0"
-                        stroke="#b247f5"
-                        variants={draw}
-                        custom={3}
-                        style={shape}
-                    />
-                    <motion.line
-                        x1={width}
-                        y1="0"
-                        x2="0"
-                        y2="0"
-                        stroke="#b247f5"
-                        variants={draw}
-                        custom={4}
                         style={shape}
                     />
                 </motion.svg>
@@ -100,6 +77,47 @@ const Projects: React.FC = () => {
                     <div className="projects-title" role="heading" aria-label="Projects">
                         <h1>PROJECTS</h1>
                     </div>
+                    <motion.div
+                        className="projects-elements"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 3.1, duration: 0.8 }}
+                    >
+                        <div className="projects-icon-title">
+                            <FaReact id="projects-icon-react" size={25} aria-label="React" />
+                            <TbBrandTypescript
+                                id="projects-icon-typescript"
+                                size={25}
+                                aria-label="TypeScript"
+                            />
+                            <SiExpress id="projects-icon-flask" size={23} aria-label="Flask" />
+                            <FaNodeJs
+                                id="projects-icon-postgres"
+                                size={22}
+                                aria-label="PostgreSQL"
+                            />
+                            <h4 id="projects-name-jk">THE JIM KELLY TEAM</h4>
+                        </div>
+                        <motion.a
+                            href="https://abramyungrealty.ca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ type: "spring", bounce: 0.7 }}
+                            aria-label="Visit thejimkellyteam.com"
+                        >
+                            <FaExternalLinkAlt id="projects-link" size={iconSize} />
+                        </motion.a>
+                    </motion.div>
+                    <motion.p
+                        id="project-desc-jk"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 3.1, duration: 0.8 }}
+                    >
+                        A BROKERAGE SITE WITH LIVE LISTINGS
+                    </motion.p>
+
                     <motion.div
                         className="projects-elements"
                         initial={{ opacity: 0, y: -20 }}
@@ -138,7 +156,7 @@ const Projects: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 3.1, duration: 0.8 }}
                     >
-                       A REALTOR SITE WITH LIVE LISTINGS & REVIEWS
+                        A REALTOR SITE WITH LIVE LISTINGS & REVIEWS
                     </motion.p>
 
                     <motion.div

@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import "./SignOff.css";
 
 import { IoDocumentTextOutline } from "react-icons/io5";
@@ -7,12 +7,12 @@ import { IoDocumentTextOutline } from "react-icons/io5";
 const draw = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: (i: number) => {
-        const delay = i * 0.5;
+        const delay = 0.5 + i * 0.5;
         return {
             pathLength: 1,
             opacity: 1,
             transition: {
-                pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
+                pathLength: { delay, type: "spring", duration: 3, bounce: 0 },
                 opacity: { delay, duration: 0.01 },
             },
         };
@@ -37,12 +37,16 @@ const SignOff: React.FC = () => {
     }, []);
 
     const { width, height } = dimensions;
+    const isInView = useInView(containerRef, {
+        amount: 0.6, // Only trigger when 80% is visible
+        once: true, // Only animate once
+    });
 
     return (
         <motion.div
             className="sign-container"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 1 }}
             ref={containerRef}
         >
@@ -53,47 +57,18 @@ const SignOff: React.FC = () => {
                     viewBox={`0 0 ${width} ${height}`}
                     preserveAspectRatio="xMidYMid meet"
                     initial="hidden"
-                    animate="visible"
+                    animate={isInView ? "visible" : "hidden"}
                     style={{ position: "absolute", top: 0, left: 0, zIndex: 1 }}
                 >
-                    <motion.line
-                        x1="0"
-                        y1="0"
-                        x2="0"
-                        y2={height}
+                    <motion.rect
+                        x="0"
+                        y="0"
+                        width={width}
+                        height={height}
+                        rx="40"
                         stroke="#ff3da1"
                         variants={draw}
                         custom={1}
-                        style={shape}
-                    />
-                    <motion.line
-                        x1="0"
-                        y1={height}
-                        x2={width}
-                        y2={height}
-                        stroke="#ff3da1"
-                        variants={draw}
-                        custom={2}
-                        style={shape}
-                    />
-                    <motion.line
-                        x1={width}
-                        y1={height}
-                        x2={width}
-                        y2="0"
-                        stroke="#ff3da1"
-                        variants={draw}
-                        custom={3}
-                        style={shape}
-                    />
-                    <motion.line
-                        x1={width}
-                        y1="0"
-                        x2="0"
-                        y2="0"
-                        stroke="#ff3da1"
-                        variants={draw}
-                        custom={4}
                         style={shape}
                     />
                 </motion.svg>
@@ -101,11 +76,12 @@ const SignOff: React.FC = () => {
                     <h1>THANKS FOR STOPPING BY</h1>
                 </div>
                 <div className="sign-resume">
-                    <motion.h4 
-                    id="resume" aria-label="Resume link"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 3.6, duration: 0.8 }}
+                    <motion.h4
+                        id="resume"
+                        aria-label="Resume link"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 3.6, duration: 0.8 }}
                     >
                         RESUME
                     </motion.h4>

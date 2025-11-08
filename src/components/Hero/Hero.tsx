@@ -2,20 +2,18 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./Hero.css";
 
-
-
 const Hero: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [dimensions, setDimensions] = useState({ width: 900, height: 270 });
     const draw = {
         hidden: { pathLength: 0, opacity: 0 },
         visible: (i: number) => {
-            const delay = i * 0.5;
+            const delay = 0.5 + i * 0.5; // Add 1 second initial delay
             return {
                 pathLength: 1,
                 opacity: 1,
                 transition: {
-                    pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
+                    pathLength: { delay, type: "spring", duration: 3, bounce: 0 },
                     opacity: { delay, duration: 0.01 },
                 },
             };
@@ -40,7 +38,7 @@ const Hero: React.FC = () => {
     return (
         <motion.div
             className="hero-container"
-            initial={{y: -200, opacity: 0 }}
+            initial={{ y: -200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             ref={containerRef}
@@ -55,45 +53,17 @@ const Hero: React.FC = () => {
                     animate="visible"
                     style={{ position: "absolute", top: 0, left: 0, zIndex: 1 }}
                 >
-                    <motion.line
-                        x1="0"
-                        y1="0"
-                        x2="0"
-                        y2={height}
+                    <motion.rect
+                        x="0"
+                        y="0"
+                        rx="40"
+                        width={width}
+                        height={height}
                         stroke="#d11717"
                         variants={draw}
                         custom={1}
                         style={shape}
-                    />
-                    <motion.line
-                        x1="0"
-                        y1={height}
-                        x2={width}
-                        y2={height}
-                        stroke="#d11717"
-                        variants={draw}
-                        custom={2}
-                        style={shape}
-                    />
-                    <motion.line
-                        x1={width}
-                        y1={height}
-                        x2={width}
-                        y2="0"
-                        stroke="#d11717"
-                        variants={draw}
-                        custom={3}
-                        style={shape}
-                    />
-                    <motion.line
-                        x1={width}
-                        y1="0"
-                        x2="0"
-                        y2="0"
-                        stroke="#d11717"
-                        variants={draw}
-                        custom={4}
-                        style={shape}
+                        transition={{ delay: 1 }}
                     />
                 </motion.svg>
                 <div

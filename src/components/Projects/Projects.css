@@ -5,7 +5,7 @@
     margin-bottom: 50px;
     width: 100%;
     max-width: 900px;
-    height: 425px;
+    height: 510px;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(128, 28, 196);
@@ -21,15 +21,13 @@
     aspect-ratio: 900 / 325;
     border-radius: 40px;
     overflow: hidden;
-    z-index: 2;
+    z-index: 0;
   }
   
   .projects-content {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,14 +42,13 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background-color: rgb(145, 30, 221);
-    width: 99%;
-    margin-top: 5px;
+    width: 100%;
     font-size: 12px;
     font-weight: 700;
     padding: 20px 0;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.658);
     color: white;
-    z-index: -1;
+    z-index: 1; /* sit behind SVG overlay (SVG has higher z-index) */
   }
   
   .projects-elements {
@@ -59,6 +56,8 @@
     align-items: center;
     justify-content: space-between;
     width: 90%;
+    position: relative; /* allow z-index if needed */
+    z-index: 4; /* keep interactive elements above SVG overlay */
   }
   
   .projects-icon-title {

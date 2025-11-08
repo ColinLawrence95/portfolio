@@ -20,7 +20,11 @@ a:hover{
 }
 html {
   scroll-behavior: smooth;
+  overflow: auto;
+  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;   /* IE/Edge */
 }
+
 
 svg{
   position: relative;
