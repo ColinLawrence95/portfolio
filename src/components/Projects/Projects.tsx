@@ -96,7 +96,7 @@ const Projects: React.FC = () => {
                                 size={22}
                                 aria-label="PostgreSQL"
                             />
-                            <h4 id="projects-name-jk">THE JIM KELLY TEAM</h4>
+                            <h4 id="projects-name-jk">ABRAM YUNG BROKERAGE</h4>
                         </div>
                         <motion.a
                             href="https://abramyungrealty.ca"
@@ -104,7 +104,7 @@ const Projects: React.FC = () => {
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.05 }}
                             transition={{ type: "spring", bounce: 0.7 }}
-                            aria-label="Visit thejimkellyteam.com"
+                            aria-label="Visit abramyungrealty.ca"
                         >
                             <FaExternalLinkAlt id="projects-link" size={iconSize} />
                         </motion.a>
