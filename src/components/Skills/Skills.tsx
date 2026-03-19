@@ -5,6 +5,7 @@ import { FaNodeJs, FaReact } from "react-icons/fa";
 import { AiOutlinePython } from "react-icons/ai";
 import { SiPostgresql, SiMongodb, SiExpress, SiFlask, SiDjango } from "react-icons/si";
 import { TbBrandTypescript } from "react-icons/tb";
+import CSharpIcon from "../Projects/CSharpIcon";
 
 const Skills: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -116,6 +117,16 @@ const Skills: React.FC = () => {
                     >
                         <AiOutlinePython size={iconSize} />
                         <span className="tooltip-text">Python</span>
+                    </motion.div>
+                    <motion.div
+                        className="tooltip"
+                        initial={{ scale: 0.8, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{ delay: 2.35, duration: 0.8 }}
+                        aria-label="C#"
+                    >
+                        <CSharpIcon size={iconSize - 2} />
+                        <span className="tooltip-text">C#</span>
                     </motion.div>
                     <motion.div
                         className="tooltip"

@@ -1,9 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { RiJavascriptLine } from "react-icons/ri";
-import { FaNodeJs, FaExternalLinkAlt, FaReact } from "react-icons/fa";
+import { FaNodeJs, FaExternalLinkAlt, FaReact, FaUnity, FaSteamSymbol } from "react-icons/fa";
 import { SiPostgresql, SiMongodb, SiExpress, SiFlask } from "react-icons/si";
 import { TbBrandTypescript } from "react-icons/tb";
+import CSharpIcon from "./CSharpIcon";
 import "./Projects.css";
 
 const draw = {
@@ -73,10 +74,42 @@ const Projects: React.FC = () => {
                         style={shape}
                     />
                 </motion.svg>
+
                 <div className="projects-content">
                     <div className="projects-title" role="heading" aria-label="Projects">
                         <h1>PROJECTS</h1>
                     </div>
+                    <motion.div
+                        className="projects-elements"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 3.2, duration: 0.8 }}
+                    >
+                        <div className="projects-icon-title">
+                            <CSharpIcon id="projects-icon-csharp" size={25} />
+                            <FaUnity id="projects-icon-unity" size={25} aria-label="Unity" />
+                            <FaSteamSymbol id="projects-icon-steam" size={25} aria-label="Steam" />
+                            <h4 id="projects-name">SPELLCARVED</h4>
+                        </div>
+                        <motion.a
+                            href="https://store.steampowered.com/app/4522960/SpellCarved/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ type: "spring", bounce: 0.7 }}
+                            aria-label="Visit SpellCarved Steam Store"
+                        >
+                            <FaExternalLinkAlt id="projects-link" size={iconSize} />
+                        </motion.a>
+                    </motion.div>
+                    <motion.p
+                        id="project-desc"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 3.2, duration: 0.8 }}
+                    >
+                        A 2D WAVE SURVIVAL ROUGELIKE ON STEAM
+                    </motion.p>
                     <motion.div
                         className="projects-elements"
                         initial={{ opacity: 0, y: -20 }}
@@ -158,7 +191,6 @@ const Projects: React.FC = () => {
                     >
                         A REALTOR SITE WITH LIVE LISTINGS & REVIEWS
                     </motion.p>
-
                     <motion.div
                         className="projects-elements"
                         initial={{ opacity: 0, y: -20 }}

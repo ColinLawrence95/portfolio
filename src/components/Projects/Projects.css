@@ -5,7 +5,7 @@
     margin-bottom: 50px;
     width: 100%;
     max-width: 900px;
-    height: 510px;
+    height: 600px;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(128, 28, 196);
@@ -93,6 +93,9 @@
   }
   #projects-icon-typescript{
     margin-left: 5px;
+  }
+    #projects-icon-steam{
+    margin-right: 5px;
   }
   #projects-icon-express {
     margin: 0;
