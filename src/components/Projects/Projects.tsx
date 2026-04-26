@@ -83,7 +83,7 @@ const Projects: React.FC = () => {
                         className="projects-elements"
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 3.2, duration: 0.8 }}
+                        transition={{ delay: 3.0, duration: 0.8 }}
                     >
                         <div className="projects-icon-title">
                             <CSharpIcon id="projects-icon-csharp" size={25} />
@@ -106,7 +106,7 @@ const Projects: React.FC = () => {
                         id="project-desc"
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 3.2, duration: 0.8 }}
+                        transition={{ delay: 3.0, duration: 0.8 }}
                     >
                         A 2D WAVE SURVIVAL ROUGELIKE ON STEAM
                     </motion.p>
