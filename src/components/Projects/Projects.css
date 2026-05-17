@@ -122,7 +122,7 @@
   @media (max-width: 768px) {
     .projects-container {
       max-width: 350px;
-      height: 430px;
+      height: 510px;
     }
     .projects-svg-wrapper {
       aspect-ratio: 350 / 325;
